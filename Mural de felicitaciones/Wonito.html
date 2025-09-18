@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felicitaciones</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --azul-azulejo-oscuro: #1E4172;
+            --azul-azulejo-medio: #4A6E9B;
+            --azul-azulejo-claro: #B4D3E5;
+            --amarillo-girasol: #FFD700;
+            --blanco-roto: #FEFBF1;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, var(--azul-azulejo-oscuro) 0%, var(--azul-azulejo-medio) 100%);
+            color: var(--blanco-roto);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-family: 'Pacifico', cursive;
+            text-align: center;
+            color: var(--amarillo-girasol);
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            align-items: start;
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.05);
+            background-image: url('https://i.pinimg.com/736x/4f/78/7e/4f787edcc98e0b4e0ebe7960f53e2dfc.jpg');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            border: 3px solid var(--amarillo-girasol);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        .card:hover {
+            transform: translateY(-5px) scale(1.01);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.7);
+        }
+        .card-image-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            width: 250px;
+            height: 250px;
+            margin: 0 auto;
+        }
+        .card-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 2px solid var(--azul-azulejo-medio);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+        .card-image.expanded {
+            transform: scale(1.1);
+        }
+        .card-header-content {
+            padding: 15px 25px;
+            background-color: rgba(0, 0, 0, 0.75);
+            border-bottom: 2px solid var(--blanco-roto);
+        }
+        .card-header-content h2 {
+            margin: 0;
+            color: var(--blanco-roto);
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+        .card-content {
+            padding: 0 25px;
+            max-height: 0;
+            transition: max-height 0.5s ease-in-out;
+            background-color: rgba(0, 0, 0, 0.75);
+            overflow: hidden;
+            border-bottom-left-radius: 17px;
+            border-bottom-right-radius: 17px;
+        }
+        .card-content.expanded {
+            max-height: 500px;
+        }
+        .content-inner {
+            padding: 25px 0;
+            overflow: hidden;
+        }
+        .card-content p {
+            color: var(--blanco-roto);
+            line-height: 1.6;
+            font-style: italic;
+            font-weight: 300;
+            margin: 0;
+        }
+        @media (max-width: 768px) {
+            .card-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Felicitaciones por parte de:</h1>
+        <div class="card-container">
+            <div class="card">
+                <div class="card-image-container">
+                    <img src="Imagenes/Yor Mommy.jpeg" alt="Descripción de la imagen 1" class="card-image">
+                </div>
+                <div class="card-header-content">
+                    <h2>Tu Mami</h2>
+                </div>
+                <div class="card-content">
+                    <div class="content-inner">
+                        <p>Te amo de aquí al infinito de ida y vuelta a pasos de nano tortugas impedidas físicamente</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image-container">
+                    <img src="Imagenes/Crissisita.jpeg" alt="Descripción de la imagen 2" class="card-image">
+                </div>
+                <div class="card-header-content">
+                    <h2>Crissleidy</h2>
+                </div>
+                <div class="card-content">
+                    <div class="content-inner">
+                        <p>Querida Esclava (Anny)
+                            Hoy celebro no solo tu cumpleaños, sino también la maravillosa persona que eres. Admiro profundamente tu dedicación, tu esfuerzo constante por dar siempre lo mejor de ti, incluso cuando tu mente decía lo contrario. 💜Me inspiras con tu capacidad de soñar sin límites, de levantarte con más fuerza cada vez que caías y con esa responsabilidad y resiliencia que te hacen brillar.✨
+                            Año tras año he tenido el privilegio de verte crecer, descubrir tu potencial y convertirte en una niña capaz, auténtica y llena de luz. Eres un alma libre con un gran corazón, y me siento agradecida por haber sido testigo de tu camino.🌸
+                            Ahora que empiezas un nuevo camino por recorrer, te deseo la mejor de las suertes. Recuerda siempre lo que dijo Avril: si pudiste con el Politécnico ITLA, que el mundo se prepare. 🌎✨
+                            🧐Y nunca olvides que la vida es una sola, no para cumplir los sueños de los demás, sino para que cumplas los tuyos. Ama, ríe, sueña, llora… pero sobre todo sigue adelante</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image-container">
+                    <img src="Imagenes/Avrilita.jpg" alt="Descripción de la imagen 3" class="card-image">
+                </div>
+                <div class="card-header-content">
+                    <h2>Avril</h2>
+                </div>
+                <div class="card-content">
+                    <div class="content-inner">
+                        <p>Hoy llegas a los 18, una edad que da terror, pero marca el inicio de muchas experiencias nuevas. Quiero que sepas que estoy muy feliz de compartir este momento contigo, porque eres alguien increíble. A pesar de todo lo que hayas vivido, siempre has demostrado que puedes, que la fuerza dentro de ti es más grande que cualquier obstáculo. Confía en ti misma, porque tienes todo para brillar en este nuevo capítulo. Que este año esté lleno de aprendizajes, alegrías y momentos que te hagan sonreír de verdad. Siempre recuerda que estoy aquí para ti (aunque tenga mil tareas pendientes ) ¡Feliz cumpleaños!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image-container">
+                    <img src="Imagenes/Yari yari.jpg" alt="Descripción de la imagen 4" class="card-image">
+                </div>
+                <div class="card-header-content">
+                    <h2>Yaribelkis</h2>
+                </div>
+                <div class="card-content">
+                    <div class="content-inner">
+                        <p>Feliz cumpleaños Annycita!! Me alegra muchísimo poder celebrar otro de tus cumples junto a ti y espero que hayan muchos más por delante. Eres maravillosa persona y sé que lo serás por el resto de tu vida, te mereces todo lo bueno que hay y me alegra que de cierta manera ya estés empezando a encontrar las cosas y personas que te hacen feliz de la manera correcta. Te quiero un montón y agradezco siempre que Avril me haya hecho concerte. Ojalá cumplas mil años y que yo pueda estar ahí para desearte mil más, te quiero muchote y puedes con todo 💗</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image-container">
+                    <img src="Imagenes/Annita.jpg" alt="Descripción de la imagen 5" class="card-image">
+                </div>
+                <div class="card-header-content">
+                    <h2>Annita</h2>
+                </div>
+                <div class="card-content">
+                    <div class="content-inner">
+                        <p>✨️ Hola Anny!!
+                            Espero te la estés pasando súper en tu día. De verdad que agradezco a Dios por haberme rodeado de personas tan lindas como tú ❤️. Sé que tal vez nuestra historia tuvo sus altas y bajas, pero lo importante es que siempre hemos sabido volver a encontrarnos. Gracias por estos 6 años de amistad, por cada risa y cada momento que hemos compartido. Te quiero muchísimo y deseo que tu vida esté llena de cosas bonitas, porque te lo mereces más que nadie. 🎉</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-image-container">
+                    <img src="Imagenes/Malu.jpg" alt="Descripción de la imagen 4" class="card-image">
+                </div>
+                <div class="card-header-content">
+                    <h2>Maluska</h2>
+                </div>
+                <div class="card-content">
+                    <div class="content-inner">
+                        <p>FELIZ CUMPLEAÑOS ANNY💕 te deseo un muy feliz cumpleaños y muchos éxitos en la nueva etapa de tu vida que da inicio hoy. A partir de aquí empiezas a ser considerada una adulta y con ello vienen incluidos más retos, responsabilidades y grandes oportunidades para alcanzar tus metas, se que serás excepcional en todo lo que hagas, sigue siendo como eres, única, auténtica, empatíca y súper inteligente.
+                            Agradezco enormemente haber tenido la dicha de encontrarme contigo, estuviste para mí en uno de los momentos más difíciles de mi vida y gracias a ti he aprendido muchas cosas que son parte de quien soy hoy, sabes que siempre podrás contar conmigo y aunque no hablemos tan seguido el aprecio y la confianza que te tengo siguen intactos. Te deseo todo lo bueno que el mundo tiene para ofrecer pq te lo mereces y se que aunque Talvez tengas tropiezos como todo el mundo, serás capaz de cumplir todo lo que te propongas y te esfuerces por ello. 
+                            Felicidades Anny 🫶🎉    
+                            Att: Malu^^</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image-container">
+                    <img src="Imagenes/Vita.jpg" alt="Descripción de la imagen 2" class="card-image">
+                </div>
+                <div class="card-header-content">
+                    <h2>Visa</h2>
+                </div>
+                <div class="card-content">
+                    <div class="content-inner">
+                        <p> MI ANNNNN, FELIZ CUMPLEAÑOS BELLAAAAAA. Te quiero confesar que nunca imaginé que llegáramos a ser amigas ni que habláramos tanto, pero hoy puedo decir que no me arrepiento en lo absoluto, porque fue una de las mejores decisiones de mi vida. Me siento afortunada de haberte conocido, ya que eres una persona grandiosa y valiosa. Me alegra mucho cada vez que me cuentas algo bueno que te sucede, y aunque no todo siempre esté perfecto, me da felicidad ver cómo las cosas van mejorando para ti.
+                            En este día tan especial quiero desearte lo mejor: salud, bendiciones y muchas felicidadessss. Ojalá disfrutes tu cumpleaños rodeada de las personas que amas y que cada momento te llene de felicidad. Recuerda siempre que la distancia no es un impedimento para nuestra amistad, y que cuando necesites ayuda, puedes contar conmigooooo. 
+                            Att: Tú Vita.💕
+</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-image-container">
+                    <img src="Imagenes/Luissellita.jpg" alt="Descripción de la imagen 2" class="card-image">
+                </div>
+                <div class="card-header-content">
+                    <h2>Luisselly</h2>
+                </div>
+                <div class="card-content">
+                    <div class="content-inner">
+                        <p>Hola Anny!! Muchísimas felicidades por tu cumple te quiero muchísimo y también te quiero desear una vida llena de lindos sentimientos y agradecer por todos los momentos que estuvimos juntas por todas las cosas que nos contamos y por las travesías que hicimos juntas!!! Espero que la pases súper bien y que algún día nos podamos juntar de nuevo, muchos besos y abrazos      Luisselly ❤️
+</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-image-container">
+                    <img src="Imagenes/Crichelita.jpg" alt="Descripción de la imagen 2" class="card-image">
+                </div>
+                <div class="card-header-content">
+                    <h2>Ana</h2>
+                </div>
+                <div class="card-content">
+                    <div class="content-inner">
+                        <p>Te deseó un súper feliz cumpleaños y que siga así como va que lo está haciendo muy bien y que quiero que sea feliz en esta vida 🥺 que es la mejor amiga que he tenido en esa vida y quiero que sea súper millonaria para que me mantenga</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image-container">
+                    <img src="Imagenes/Abra.jpg" alt="Descripción de la imagen 2" class="card-image">
+                </div>
+                <div class="card-header-content">
+                    <h2>Abraham</h2>
+                </div>
+                <div class="card-content">
+                    <div class="content-inner">
+                        <p>Feliz cumpleaños mi niña bella, muchas gracias por seguir siendo mi mejor amiga en estos años, recuerda que siempre te apoyaré 
+Con amor: Mael 💜❤️‍🩹</p>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const imageContainers = document.querySelectorAll('.card-image-container');
+
+            imageContainers.forEach(container => {
+                container.addEventListener('click', () => {
+                    const card = container.closest('.card');
+                    const content = card.querySelector('.card-content');
+                    const image = container.querySelector('.card-image');
+
+                    // Cierra cualquier otra tarjeta que esté abierta
+                    document.querySelectorAll('.card-content.expanded').forEach(item => {
+                        if (item !== content) {
+                            item.classList.remove('expanded');
+                        }
+                    });
+
+                    document.querySelectorAll('.card-image.expanded').forEach(img => {
+                        if (img !== image) {
+                            img.classList.remove('expanded');
+                        }
+                    });
+
+                    // Alterna el estado de la tarjeta clickeada
+                    content.classList.toggle('expanded');
+                    image.classList.toggle('expanded');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
